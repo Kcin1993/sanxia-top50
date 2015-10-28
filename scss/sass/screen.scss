@@ -1,0 +1,47 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css);
+
+
+// Variable------------------------------------------------------------------------------------ Variable
+$mainFont: Meiryo, "Meiryo UI", "Microsoft JhengHei UI", "Microsoft JhengHei", sans-serif;
+
+
+// Basic------------------------------------------------------------------------------------ Basic
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: $mainFont;
+}
+* {
+  box-sizing: border-box;
+}
+.brief_logo {
+	position: fixed;
+	float: right;
+	top: 1em;
+	right: 1em;
+	width: 100px;
+}
+
+
+// Google map------------------------------------------------------------------------------------ Google map
+#map_wrapper {
+  padding: 0 !important;
+  #googleMap {
+    width: 100vw;
+    height: 70vh;
+  }
+}
+
+
+// Brief------------------------------------------------------------------------------------ Brief
+.brief_wrapper {
+	text-align: center;
+}

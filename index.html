@@ -12,7 +12,7 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="scss/stylesheets/screen.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -23,18 +23,38 @@
 
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <!-- font awesome CDN -->
-        <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwC5wkeC7AoJ0WnZUu_-7z7yZdQkID-nY">
+        </script>
 
     </head>
     <body>
         <div class="container-fluid">
             <div class="row">
+                <img src="img/50food.png" class="img-responsive brief_logo">
                 <div class="col-md-12 col-sm-12" id="map_wrapper">
-                    <div id="googleMap"></div>
+                    <div id="googleMap">
+                    </div>
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-12 col-sm-12">
                     <div class="brief_wrapper">
-                        <img src="img/50food.png" class="img-responsive brief_logo">
+                        <div class="brief_title">
+                            <h4>- 統計區域 -</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <div class="about_wrapper">
+                        <div class="about_title">
+                            <h4>- 關於本計畫 -</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <div class="disqus_wrapper">
+                        <div class="disqus_title">
+                            <h4>- 討論區 -</h4>
+                        </div>
                     </div>
                 </div>
             </div>
