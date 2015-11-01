@@ -28,7 +28,27 @@
         </script>-->
 
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-
+        
+        <script>
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+             */
+            /*
+            var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function() {  // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                
+                s.src = '//httpkcin1993githubiosanxiatop50.disqus.com/embed.js';
+                
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
     </head>
     <body>
         <div class="container-fluid">
@@ -45,19 +65,19 @@
                           <!-- Wrapper for slides -->
                           <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                              <img src="http://placehold.it/1350x550" alt="..." class="carousel_img">
+                              <img src="https://unsplash.com/photos/TTrJMhrkoeY/download" alt="..." class="carousel_img">
                               <div class="carousel-caption">
                                 福美軒金牛角
                               </div>
                             </div>
                             <div class="item">
-                              <img src="http://placehold.it/1350x550" alt="..." class="carousel_img">
+                              <img src="https://unsplash.com/photos/0RUlEosIP8Y/download" alt="..." class="carousel_img">
                               <div class="carousel-caption">
                                 江南第一美食老虎麵
                               </div>
                             </div>
                             <div class="item">
-                              <img src="http://placehold.it/1350x550" alt="..." class="carousel_img">
+                              <img src="https://unsplash.com/photos/xKSRpUH0VZo/download" alt="..." class="carousel_img">
                               <div class="carousel-caption">
                                 海爺四號乾麵
                               </div>
@@ -67,7 +87,6 @@
                     </div>
                     <div class="header_content">
                         <article>
-                            <i class="fa fa-map-marker fa-2x"></i>
                             <h3>關於本計畫</h3>
                             <p>
                                 <span>
@@ -77,7 +96,7 @@
                                     計畫發起的動機其實很單純，為了練習地圖網站的應用，因此就誕生了這個計畫
                                 </span><br>
                                 <span style="margin-top: 1.8%;">
-                                    期望美食地圖的計畫能夠解決：『埃 今天要吃什麼阿？』的問題！
+                                    期望美食地圖的計畫能夠解決：『阿呀 今天要吃什麼阿？』的問題！
                                 </span>
                             </p>
                         </article>
@@ -94,6 +113,9 @@
                 </div>
                 <div class="col-md-12 col-sm-12" id="map_wrapper">
                     <div id="googleMap">
+                    </div>
+                    <div class="map_content">
+                        <div id="disqus_thread"></div>
                     </div>
                     <div class="footer">
                         
