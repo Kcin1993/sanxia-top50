@@ -3,8 +3,6 @@
 //1. (24.942946, 121.368398),
 //2. zoom:14;
 
-
-
 var locations = [
   ["闇黑工廠",     24.944030, 121.374654],
   ["艾波索",    24.943920, 121.373774]
@@ -42,4 +40,13 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
+//scroll down
+$("document").ready(function() {      
+        
+    $('.scrollmap, .scrolldown').click(function(){
+      $('html, body').animate({
+        scrollTop: $("#googleMap").offset().top
+      }, 1500);    
+     });
+});
 

@@ -9,6 +9,8 @@
 
 // Variable------------------------------------------------------------------------------------ Variable
 $mainFont: Meiryo, "Meiryo UI", "Microsoft JhengHei UI", "Microsoft JhengHei", sans-serif;
+$titlecolor: rgba(50,50,50,0.8);
+$textcolor: rgba(50,50,50,0.78);
 
 
 // Basic------------------------------------------------------------------------------------ Basic
@@ -17,62 +19,112 @@ html, body {
   padding: 0;
   height: 100%;
   width: 100%;
-  font-family: $mainFont;
+  font-family: $mainFont !important;
 }
 * {
   box-sizing: border-box;
+}
+#header_wrapper, #map_wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 !important;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(50,50,50,0.2);
+}
+
+
+// Header   ------------------------------------------------------------------------------------     Header
+#header_wrapper {
+  position: relative;
+  .carousel_wrapper {
+    width: 100%;
+    height: 50vh;
+    .carousel_img {
+      width: 100%;
+      height: 50vh;
+      z-index: 998 !important;
+    }
+  }
+  .header_content {
+    article {
+      text-align: center;
+      padding-top: 4%;
+      h3 {
+        margin-top: 2px;
+        font-weight: 400;
+        color: $titlecolor;
+      }
+      p {
+        color: $textcolor;
+        span {
+          display: inline-block;
+          margin-top: 10px;
+        }
+      }
+    }
+    .link_nav {
+      text-align: center;
+      margin-top: 3%;
+      .link {
+        display: inline-block;
+        padding: 0.5% 1.5%;
+        text-decoration: none;
+        color: $textcolor !important;
+        margin: 0 20px;
+        border: 1px solid rgba(50,50,50,0.3);
+        cursor: pointer;
+      }
+      .link:hover {
+        text-decoration: none;
+        color: $textcolor !important;
+      }
+    }
+  }
+  .scrollmap {
+    bottom: 40px;
+    right: 40px;
+    position: absolute;
+    cursor: pointer;
+    -webkit-animation: bounce 1.5s infinite; 
+      -moz-animation:    bounce 1.5s infinite; 
+      -o-animation:      bounce 1.5s infinite; 
+      animation:         bounce 1.5s infinite; 
+  }
+}
+@-webkit-keyframes bounce {
+  0%{margin-bottom: 0px;}
+  70%{margin-bottom: -10px;}
+  100%{margin-bottom: 0px;}
+}
+@-moz-keyframes bounce {
+  0%{margin-bottom: 0px;}
+  70%{margin-bottom: -10px;}
+  100%{margin-bottom: 0px;}
+}
+@-o-keyframes bounce {
+  0%{margin-bottom: 0px;}
+  70%{margin-bottom: -10px;}
+  100%{margin-bottom: 0px;}
+}
+@keyframes bounce {
+  0%{margin-bottom: 0px;}
+  70%{margin-bottom: -10px;}
+  100%{margin-bottom: 0px;}
 }
 
 
 // Google map------------------------------------------------------------------------------------ Google map
 #map_wrapper {
-  padding: 0 !important;
-  overflow: hidden;
+  position: relative;
   #googleMap {
     width: 100vw;
-    height: 70vh;
-    border-bottom: 1px solid rgba(50,50,50,0.2);
+    height: 50vh;
   }
-}
-.menu_wrapper {
-  padding: 15px;
-  height: 70vh;
-  box-shadow: 1px 1px 3px rgba(50,50,50,0.1);
-  border-bottom: 1px solid rgba(50,50,50,0.2);
-  .brief_logo {
-    width: 100px;
-    background: rgba(255,255,255,1);
-    padding: 1.5%;
-    border-radius: 4px;
-  }
-  ul {
-    text-align: center;
-    margin-top: 1em;
-    padding: 0 !important;
-    li {
-      cursor: pointer;
-      background: rgba(70,70,70,0.1);
-      border-radius: 2px;
-      margin-top: 5px;
-      padding: 2%;
-      display: block;
-    }
-  }
-  ul:before {
-    content: "";
+  .footer {
     position: absolute;
-    top: 0;
+    width: 100%;
+    bottom: 0;
+    height: 100px;
+    border-top: 1px solid rgba(50,50,50,0.3);
   }
-  .link_wrapper {
-    text-align: center;
-    a {
-      display: block;
-    }
-  }
-}
-
-
-// Brief------------------------------------------------------------------------------------ Brief
-.brief_wrapper {
-	text-align: center;
 }
