@@ -109,8 +109,8 @@ html, body {
 }
 /* line 47, ../sass/screen.scss */
 #header_wrapper .carousel .carousel-inner .carousel_img {
-  height: 100%;
-  width: auto;
+  height: auto;
+  width: 100%;
 }
 /* line 54, ../sass/screen.scss */
 #header_wrapper .header_content article {
@@ -153,72 +153,37 @@ html, body {
   text-decoration: none;
   color: rgba(50, 50, 50, 0.78) !important;
 }
-/* line 89, ../sass/screen.scss */
-#header_wrapper .scrollmap {
-  bottom: 40px;
-  right: 40px;
-  position: absolute;
-  cursor: pointer;
-  -webkit-animation: bounce 1.5s infinite;
-  -moz-animation: bounce 1.5s infinite;
-  -o-animation: bounce 1.5s infinite;
-  animation: bounce 1.5s infinite;
-}
 
-@-webkit-keyframes bounce {
-  0% {
-    margin-bottom: 0px;
-  }
-  70% {
-    margin-bottom: -10px;
-  }
-  100% {
-    margin-bottom: 0px;
-  }
-}
-@-moz-keyframes bounce {
-  0% {
-    margin-bottom: 0px;
-  }
-  70% {
-    margin-bottom: -10px;
-  }
-  100% {
-    margin-bottom: 0px;
-  }
-}
-@-o-keyframes bounce {
-  0% {
-    margin-bottom: 0px;
-  }
-  70% {
-    margin-bottom: -10px;
-  }
-  100% {
-    margin-bottom: 0px;
-  }
-}
-@keyframes bounce {
-  0% {
-    margin-bottom: 0px;
-  }
-  70% {
-    margin-bottom: -10px;
-  }
-  100% {
-    margin-bottom: 0px;
-  }
-}
 /* line 123, ../sass/screen.scss */
 #map_wrapper {
   position: relative;
-  min-height: 100vh;
-  padding: 1% !important;
 }
-/* line 127, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 #map_wrapper #googleMap {
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 70vh;
   z-index: 998;
+}
+/* line 131, ../sass/screen.scss */
+#map_wrapper i {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  z-index: 999;
+  cursor: pointer;
+}
+
+/* line 142, ../sass/screen.scss */
+#disqus_thread {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+/* line 150, ../sass/screen.scss */
+#footer_wrapper {
+  padding: 1%;
+  padding-left: 2%;
+  height: 10vh;
 }
