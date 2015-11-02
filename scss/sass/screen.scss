@@ -9,8 +9,8 @@
 
 // Variable------------------------------------------------------------------------------------ Variable
 $mainFont: Meiryo, "Meiryo UI", "Microsoft JhengHei UI", "Microsoft JhengHei", sans-serif;
-$titlecolor: rgba(50,50,50,0.8);
-$textcolor: rgba(50,50,50,0.78);
+$titlecolor: rgba(50,50,50,0.88);
+$textcolor: rgba(50,50,50,0.85);
 
 
 // Basic------------------------------------------------------------------------------------ Basic
@@ -82,7 +82,9 @@ html, body {
       }
       .link:hover {
         text-decoration: none;
-        color: $textcolor !important;
+        box-shadow: 1px 1px 2px rgba(50,50,50,0.2);
+        color: rgba(50,50,50,1);
+
       }
     }
   }
@@ -125,8 +127,21 @@ html, body {
   #googleMap {
     position: absolute;
     width: 100vw;
-    height: 70vh;
+    height: 80vh;
     z-index: 998;
+  }
+  .stat_wrapper {
+    position: absolute;
+    bottom: 5vh;
+    span {
+      display: inline-block;
+      margin: 0 30px;
+      font-size: 22px;
+      p {
+        display: inline-block;
+        font-size: 16px;
+      }
+    }
   }
   i {
     position: absolute;
@@ -150,5 +165,5 @@ html, body {
 #footer_wrapper {
   padding: 1%;
   padding-left: 2%;
-  height: 10vh;
+  height: 7vh;
 }

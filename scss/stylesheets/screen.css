@@ -121,11 +121,11 @@ html, body {
 #header_wrapper .header_content article h3 {
   margin-top: 2px;
   font-weight: 400;
-  color: rgba(50, 50, 50, 0.8);
+  color: rgba(50, 50, 50, 0.88);
 }
 /* line 62, ../sass/screen.scss */
 #header_wrapper .header_content article p {
-  color: rgba(50, 50, 50, 0.78);
+  color: rgba(50, 50, 50, 0.85);
   font-size: 17px;
 }
 /* line 65, ../sass/screen.scss */
@@ -143,7 +143,7 @@ html, body {
   display: inline-block;
   padding: 0.5% 1.5%;
   text-decoration: none;
-  color: rgba(50, 50, 50, 0.78) !important;
+  color: rgba(50, 50, 50, 0.85) !important;
   margin: 0 20px;
   border: 1px solid rgba(50, 50, 50, 0.3);
   cursor: pointer;
@@ -151,21 +151,38 @@ html, body {
 /* line 83, ../sass/screen.scss */
 #header_wrapper .header_content .link_nav .link:hover {
   text-decoration: none;
-  color: rgba(50, 50, 50, 0.78) !important;
+  box-shadow: 1px 1px 2px rgba(50, 50, 50, 0.2);
+  color: #323232;
 }
 
-/* line 123, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 #map_wrapper {
   position: relative;
 }
-/* line 125, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 #map_wrapper #googleMap {
   position: absolute;
   width: 100vw;
-  height: 70vh;
+  height: 80vh;
   z-index: 998;
 }
-/* line 131, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
+#map_wrapper .stat_wrapper {
+  position: absolute;
+  bottom: 5vh;
+}
+/* line 136, ../sass/screen.scss */
+#map_wrapper .stat_wrapper span {
+  display: inline-block;
+  margin: 0 30px;
+  font-size: 22px;
+}
+/* line 140, ../sass/screen.scss */
+#map_wrapper .stat_wrapper span p {
+  display: inline-block;
+  font-size: 16px;
+}
+/* line 146, ../sass/screen.scss */
 #map_wrapper i {
   position: absolute;
   bottom: 1em;
@@ -174,16 +191,16 @@ html, body {
   cursor: pointer;
 }
 
-/* line 142, ../sass/screen.scss */
+/* line 157, ../sass/screen.scss */
 #disqus_thread {
   width: 500px;
   margin: 0 auto;
   margin-top: 15px;
 }
 
-/* line 150, ../sass/screen.scss */
+/* line 165, ../sass/screen.scss */
 #footer_wrapper {
   padding: 1%;
   padding-left: 2%;
-  height: 10vh;
+  height: 7vh;
 }
