@@ -25,16 +25,15 @@ function initialize() {
         '<div class="info_content">' +
         '<h3>福美軒金牛角</h3>' +
         '<p>特色：三峽金牛角創始店</p>' + 
+        '<p>推薦人：Shock! 三峽客</p>' +
         '<p>探索：新北市三峽區信義街25號</p>' + 
-        '<a href="http://www.shockpaper.com/2013/09/%E4%BB%A5%E5%A0%85%E6%8C%81%E6%9B%B8%E5%AF%AB%E4%B8%89%E8%A7%92%E6%B9%A7%E4%BB%A3%E5%90%8D%E8%A9%9E/#more-2242">推薦人：Shock! 三峽客</a>'
         '</div>'
         ],
         [
         '<div class="info_content">' +
         '<h3>榕樹下鮮肉包</h3>' +
-        '<p>text</p>' +
         '<p>探索：台北縣三峽鎮中華路3巷11之3號</p>' +
-        '<a href="http://www.shockpaper.com/2012/11/%e3%80%90%e5%ba%97%e9%8b%aa%e5%b0%88%e6%ac%84%e3%80%91%e6%a6%95%e6%a8%b9%e4%b8%8b%e9%ae%ae%e8%82%89%e5%8c%85/">推薦人：Shock! 三峽客</a>'
+        '<p>推薦人：Shock! 三峽客</p>' +
         '</div>'
         ]
     ];
