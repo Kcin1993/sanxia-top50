@@ -213,7 +213,7 @@ html, body {
 #map_wrapper {
   position: relative;
   min-height: 100vh;
-  padding: 1%;
+  padding: 1% !important;
 }
 /* line 127, ../sass/screen.scss */
 #map_wrapper #googleMap {
@@ -221,11 +221,4 @@ html, body {
   width: 100vw;
   height: 100vh;
   z-index: 998;
-}
-
-/* line 145, ../sass/screen.scss */
-#disqus_thread {
-  width: 500px;
-  margin: 0 auto;
-  margin-top: 15px;
 }
