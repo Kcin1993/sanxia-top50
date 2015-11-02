@@ -126,18 +126,19 @@ html, body {
 /* line 62, ../sass/screen.scss */
 #header_wrapper .header_content article p {
   color: rgba(50, 50, 50, 0.78);
+  font-size: 17px;
 }
-/* line 64, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 #header_wrapper .header_content article p span {
   display: inline-block;
   margin-top: 10px;
 }
-/* line 70, ../sass/screen.scss */
+/* line 71, ../sass/screen.scss */
 #header_wrapper .header_content .link_nav {
   text-align: center;
   margin-top: 3%;
 }
-/* line 73, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 #header_wrapper .header_content .link_nav .link {
   display: inline-block;
   padding: 0.5% 1.5%;
@@ -147,12 +148,12 @@ html, body {
   border: 1px solid rgba(50, 50, 50, 0.3);
   cursor: pointer;
 }
-/* line 82, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 #header_wrapper .header_content .link_nav .link:hover {
   text-decoration: none;
   color: rgba(50, 50, 50, 0.78) !important;
 }
-/* line 88, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
 #header_wrapper .scrollmap {
   bottom: 40px;
   right: 40px;
@@ -208,17 +209,22 @@ html, body {
     margin-bottom: 0px;
   }
 }
-/* line 122, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 #map_wrapper {
   position: relative;
+  min-height: 100vh;
+  padding: 1%;
 }
-/* line 124, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 #map_wrapper #googleMap {
+  position: absolute;
   width: 100vw;
-  height: 50vh;
+  height: 100vh;
+  z-index: 998;
 }
-/* line 128, ../sass/screen.scss */
-#map_wrapper #disqus_thread {
+
+/* line 145, ../sass/screen.scss */
+#disqus_thread {
   width: 500px;
   margin: 0 auto;
   margin-top: 15px;
