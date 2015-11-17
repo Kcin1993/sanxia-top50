@@ -1,3 +1,36 @@
+// Fix mask scroll 
+$(document).ready(function(){
+  $(".header_toggle").click(function(){
+    $(".header_toggle").toggleClass("move_top");
+  });
+});
+
+
+//Scroll icon
+$("document").ready(function() {      
+    $('#down1').click(function(){
+      $('html, body').animate({
+        scrollTop: $("#report_wrapper").offset().top
+      }, 1500);    
+     });
+    $('#down2').click(function(){
+      $('html, body').animate({
+        scrollTop: $("#dist_wrapper").offset().top
+      }, 1500);    
+     });
+    $('#down3').click(function(){
+      $('html, body').animate({
+        scrollTop: $("#thanks_wrapper").offset().top
+      }, 1500);    
+     });
+    $('#up1').click(function(){
+      $('html, body').animate({
+        scrollTop: $("#map_wrapper").offset().top
+      }, 1500);    
+     });
+});
+
+
 // Google map
 jQuery(function($) {
     var script = document.createElement('script');
@@ -9,15 +42,16 @@ function initialize() {
     var map;
     var bounds = new google.maps.LatLngBounds();
     var mapOptions = {
-        mapTypeId: 'roadmap'
+        mapTypeId: 'roadmap',
+        disableDefaultUI: true //Remove controls
     };
                     
     map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
     map.setTilt(45);
         
     var markers = [
-        ["福美軒金牛角", 24.935443, 121.371027],
-        ["榕樹下鮮肉包",24.932174, 121.374947],
+        ['福美軒金牛角', 24.935443, 121.371027,'http://labs.google.com/ridefinder/images/mm_20_purple.png'],
+        ['榕樹下鮮肉包',24.932174, 121.374947,'http://labs.google.com/ridefinder/images/mm_20_purple.png'],
     ];
                         
     var infoWindowContent = [
@@ -66,65 +100,3 @@ function initialize() {
     
 }
 
-
-
-//scroll 
-$("document").ready(function() {      
-    $('.scrolldown').click(function(){
-      $('html, body').animate({
-        scrollTop: $("#googleMap").offset().top
-      }, 1500);    
-     });
-    $('.scrolltop').click(function(){
-      $('html, body').animate({
-        scrollTop: $("#header_wrapper").offset().top
-      }, 1500);    
-     });
-});
-
-
-
-
-
-
-
-//google map api
-//Basic information of sanxia map
-//1. (24.942946, 121.368398),
-//2. zoom:14;
-
-// var locations = [
-//   ["闇黑工廠",     24.944030, 121.374654],
-//   ["艾波索",    24.943920, 121.373774],
-//   ["test",    24.944120, 121.374074]
-// ];
-
-// function initialize() {
-// 	var infowindow = new google.maps.InfoWindow();
-// 	var mapCanvas = document.getElementById('googleMap');
-// 	var mapOptions = {
-// 		center: new google.maps.LatLng(24.942946, 121.368398),
-// 		zoom: 15,
-// 		mapTypeId: google.maps.MapTypeId.ROADMAP,
-// 	}
-// 	var map = new google.maps.Map(mapCanvas, mapOptions);
-	  
-// 	function placeMarker( loc ) {
-// 	  var latLng = new google.maps.LatLng( loc[1], loc[2]);
-// 	  var marker = new google.maps.Marker({
-// 	    position : latLng,
-// 	    map      : map
-// 	  });
-// 	  google.maps.event.addListener(marker, 'click', function(){
-// 	      infowindow.close(); // Close previously opened infowindow
-// 	      infowindow.setContent( "<div id='infowindow'>"+ loc[0] +"</div>");
-// 	      infowindow.open(map, marker);
-// 	  });
-// 	}
-
-// 	for(var i=0; i<locations.length; i++) {
-// 	  placeMarker( locations[i] );
-// 	} 
-// }//initialize end
-
-// google.maps.event.addDomListener(window, 'load', initialize);

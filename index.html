@@ -9,11 +9,6 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="scss/stylesheets/screen.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
@@ -21,100 +16,158 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <!-- Boostrap CDN -->
 
+        <link rel="stylesheet" href="css/bootstrap.min.css"><!-- offline bootstrap -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="scss/stylesheets/screen.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+        <!-- Google map -->        
+
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <!-- font awesome CDN -->
 
-        <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwC5wkeC7AoJ0WnZUu_-7z7yZdQkID-nY">
-        </script>-->
 
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-
-        <script>
-            (function() {  // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                
-                s.src = '//httpkcin1993githubiosanxiatop50.disqus.com/embed.js';
-                
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-        </script>
     </head>
     <body>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12" id="header_wrapper">
-                    <div class="carousel_wrapper">
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                          <!-- Indicators -->
-                          <ol class="carousel-indicators">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                            <!-- <li data-target="#carousel-example-generic" data-slide-to="2"></li> -->
-                          </ol>
-                          <!-- Wrapper for slides -->
-                          <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                              <img src="http://www.shockpaper.com/wp-content/uploads/2013/10/jpg" alt="..." class="carousel_img">
-                              <div class="carousel-caption">
-                                福美軒金牛角
-                              </div>
-                            </div>
-                            <div class="item">
-                              <img src="http://www.shockpaper.com/wp-content/uploads/2012/11/p177302dj71umb1mnl5ka18i5dq8b_thumb_960.jpg" alt="..." class="carousel_img">
-                              <div class="carousel-caption">
-                                榕樹下鮮肉包
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="header_content">
-                        <article>
-                            <h3>關於本計畫</h3>
-                            <p>
-                                <span>
-                                    『 峽美食Top50計畫 』目標蒐集50道由三峽學生、居民推薦的在地美食
-                                </span><br>
-                                <span>
-                                    計畫發起的動機其實很單純，為了練習地圖網站的應用，因此就誕生了這個計畫
-                                </span><br>
-                                <span style="margin-top: 1.8%;">
-                                    期望美食地圖的計畫能夠解決：『阿呀 今天要吃什麼阿？』的問題！
-                                </span>
-                            </p>
-                        </article>
-                        <div class="link_nav">
-                            <a class="link" href="http://yogobuy.com.tw/project/%E4%B8%89%E5%B3%BD%E7%BE%8E%E9%A3%9F%E3%80%8Etop-50%E3%80%8F%E8%A8%88%E7%95%AB/">
-                               提案美食
-                            </a>
-                            <a class="link scrolldown">
-                               地圖美食
-                            </a>
-                        </div>
-                    </div>
-                    <!-- <i class="fa fa-map fa-2x scrollmap"></i> -->
-                </div>
-                <div class="col-md-12 col-sm-12 col-xs-12" id="map_wrapper">
-                    <div id="googleMap">
-                    </div>
-                    <div class="stat_wrapper">
-                        <span><p>參與人數</p>x0</span>
-                        <span><p>美食提案</p>x2</span>
-                    </div>
-                    <i class="fa fa-chevron-circle-up fa-3x scrolltop"></i>
-                </div>
-                <div class="col-md-12 col-sm-12 col-xs-12" id="footer_wrapper">
-                    <p>
-                        Part of data from
-                        <a href="http://www.shockpaper.com/category/%E7%BE%8E%E9%A3%9F%E5%9C%B0%E5%9C%96/">Shock! 三峽客</a>   │   
-                        Source code
-                        <a href=""><i class="fa fa-github-square"></i></a>   │   
-                        Follow facebook
-                        <a href=""><i class="fa fa-facebook-official"></i></a>
-                    </p>
-                </div>
+            <div class="header_toggle">
+                <header>
+                    <h1>
+                        Sanxia Food Top50<br>
+                        <small>三峽美食地圖Top50計畫</small>
+                    </h1>
+                    <article class="brief_wrapper">
+                        <p></p>
+                    </article>
+                </header> 
             </div>
+            <div class="row">
+                <section id="map_wrapper" class="col-md-12">
+                    <div id="googleMap"></div>
+                    <div id="down1" class="scroll_wrapper"><i class="fa fa-angle-down"></i></div>
+                </section>
+                <section id="report_wrapper" class="col-md-12">
+                    <article>
+                        <h1>
+                            Special Picked<br>
+                            <small>Description</small>
+                        </h1>
+                    </article>
+                    <div class="row">
+                        <div id="card_wrapper" class="col-md-7">
+                            <div class="report_card">
+                                <header>
+                                    
+                                </header>
+                            </div>
+                        </div>
+                        <div id="outcome_wrapper" class="col-md-5">
+                            
+                        </div>
+                    </div>
+                    <div id="down2" class="scroll_wrapper"><i class="fa fa-angle-down"></i></div>
+                </section>
+                <section id="dist_wrapper" class="col-md-12">
+                    <article>
+                        <h1>CONTRIBUTION</h1>
+                        <P>在下方填入推薦的美食，一起完成美食地圖吧!</P>
+                    </article>
+                    <div id="sheet_wrapper">
+                        <div itemscope itemtype="http://schema.org/CreativeWork/FormObject">
+                            <meta itemprop="name" content="&#21578;&#35380;&#25105;&#20497;&#20320;&#25152;&#35469;&#28858;&#30340;&#19977;&#23805;&#32654;&#39135;">
+                            <meta itemprop="url" content="https://docs.google.com/forms/d/11WsfosfEA8J7yKH1PcJkJNZ_VU7V4OnBJDe5vajs9T4/viewform?c=0&amp;w=1&amp;usp=send_form">
+                            <meta itemprop="embedUrl" content="https://docs.google.com/forms/d/11WsfosfEA8J7yKH1PcJkJNZ_VU7V4OnBJDe5vajs9T4/viewform?c=0&amp;w=1&amp;usp=send_form&amp;embedded=true">
+                            <meta itemprop="faviconUrl" content="https://ssl.gstatic.com/docs/spreadsheets/forms/favicon_qp2.png">
+                            <div>
+                              <div>
+                                <div>
+                                  <h1 dir="ltr"></h1>
+                                </div>
+                              </div>
+                              <div>
+                                <script type="text/javascript">var submitted_yqprmdwg=false;</script>
+                                <iframe name="hidden_iframe_yqprmdwg" id="hidden_iframe_yqprmdwg" style="display:none;" onload="if(submitted_yqprmdwg){window.location='http://kcin1993.github.io/sanxia-top50/';}"></iframe>
+                                <form action="https://docs.google.com/forms/d/11WsfosfEA8J7yKH1PcJkJNZ_VU7V4OnBJDe5vajs9T4/formResponse" method="post" target="hidden_iframe_yqprmdwg" onsubmit="submitted_yqprmdwg=true;" id="ss-form" target="_self" onsubmit="">
+                                  <ol role="list" style="padding-left: 0">
+                                    <div role="listitem">
+                                      <div dir="auto">
+                                        <div>
+                                          <label for="entry_312704383">
+                                            <div>若有人問你『三峽有什麼好吃的』，你最推薦什麼?
+                                              <label for="itemView.getDomIdToLabel()" aria-label="(Kailangang field)"></label>
+                                              <span aria-hidden="true"></span>
+                                            </div>
+                                            <div dir="auto"></div>
+                                          </label>
+                                          <div id="2001346012_errorMessage"></div>
+                                        </div>
+                                        <input type="text" name="entry.312704383" value="" id="entry_312704383" dir="auto" aria-label="若有人問你『三峽有什麼好吃的』，你最推薦什麼?  " aria-required="true" required="" title="">
+                                      </div>
+                                    </div>
+                                    <div role="listitem">
+                                      <div dir="auto">
+                                        <div>
+                                          <label for="entry_2130931475">
+                                            <div>給點這道美食或店家的評語
+                                              <label for="itemView.getDomIdToLabel()" aria-label="(Kailangang field)"></label>
+                                              <span aria-hidden="true"></span>
+                                            </div>
+                                            <div dir="auto"></div>
+                                          </label>
+                                          <div id="2141681830_errorMessage"></div>
+                                        </div>
+                                        <textarea name="entry.2130931475" id="entry_2130931475" dir="auto" aria-label="給點這道美食或店家的評語  " aria-required="true" required=""></textarea>
+                                      </div>
+                                    </div>
+                                    <div role="listitem">
+                                      <div dir="auto">
+                                        <div>
+                                          <label for="entry_1833608599">
+                                            <div>Facebook ID </div>
+                                            <div dir="auto">謝謝你提供的美食資訊。留下你的臉書，我們將在下方感謝參與本計畫的同學</div>
+                                          </label>
+                                          <input type="text" name="entry.1833608599" value="" id="entry_1833608599" dir="auto" aria-label="Facebook ID  謝謝你提供的美食資訊。留下你的臉書，我們將在下方感謝參與本計畫的同學 " title="">
+                                          <div id="660508889_errorMessage"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <input type="hidden" name="draftResponse" value="[,,&quot;799251305399257435&quot;]">
+                                    <input type="hidden" name="pageHistory" value="0">
+                                    <input type="hidden" name="fvv" value="0">
+                                    <input type="hidden" name="fbzx" value="799251305399257435">
+                                    <div>
+                                      <table id="navigation-table" style="margin: 0 auto;">
+                                        <tbody>
+                                          <tr>
+                                            <td id="navigation-buttons" dir="ltr">
+                                              <input type="submit" name="submit" value="送出推薦" id="ss-submit">
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </ol>
+                                </form>
+                              </div>
+                              <div id="docs-aria-speakable" aria-live="assertive" role="region" aria-atomic></div>
+                            </div>
+
+
+                            <script type='text/javascript' src='/static/forms/client/js/2424292818-formviewer_prd__fil.js'></script>
+                            <script type="text/javascript">H5F.setup(document.getElementById('ss-form'));
+                                      _initFormViewer(
+                                        "[100,,[]\n]\n");</script>
+                        </div>
+                    </div>
+                    <div id="down3" class="scroll_wrapper"><i class="fa fa-angle-down"></i></div>
+                </section>
+                <section id="thanks_wrapper" class="col-md-12">
+                    <div id="up1" class="scroll_wrapper"><i class="fa fa-angle-up"></i></div>
+                </section>
+            </div>
+            <footer></footer>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

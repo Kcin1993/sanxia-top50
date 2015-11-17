@@ -6,164 +6,226 @@
 @import "compass/reset";
 @import url(http://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css);
 
+/* Variable ------------------------------------------------------------------------------ */
+$border: 1px solid rgba(50,50,50,0.3);
+$shadow: 1px 1px 3px rgba(50,50,50,0.4);
+$highsize: 36px;
+$titlesize: 24px;
+$textsize: 13px;
+$radius: 3px;
 
-// Variable------------------------------------------------------------------------------------ Variable
-$mainFont: Meiryo, "Meiryo UI", "Microsoft JhengHei UI", "Microsoft JhengHei", sans-serif;
-$titlecolor: rgba(50,50,50,0.88);
-$textcolor: rgba(50,50,50,0.85);
 
-
-// Basic------------------------------------------------------------------------------------ Basic
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  font-family: $mainFont !important;
-}
+/* Basic ------------------------------------------------------------------------------ */
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
-#header_wrapper, #map_wrapper {
-  width: 100%;
-  min-height: 100vh;
-  padding: 0 !important;
-  overflow: hidden;
-  border-bottom: 1px solid rgba(50,50,50,0.2);
+html, body {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.container-fluid {
+	padding: 0 !important;
+	margin: 0 !important;
+	position: relative;
+	.row {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+}
+#map_wrapper, #report_wrapper, #dist_wrapper, #thanks_wrapper {
+	position: relative;
+	padding: 0 !important;
+}
+.scroll_wrapper {
+	position: absolute;
+	bottom: 2em;
+	right: 2em;
+	width: 50px;
+	height: 50px;
+	background: rgba(50,50,50,0.2);
+	text-align: center;
+	cursor: pointer;
+	z-index: 998;
+	i {
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		z-index: 999;
+	}
 }
 
 
-// Header   ------------------------------------------------------------------------------------     Header
-#header_wrapper {
-  position: relative;
-  .carousel {
-    width: 100%;
-    height: 50vh;
-    overflow: hidden;
-    margin: 0 auto;
-    .carousel-inner {
-      width: 100%;
-      height: 50vh;
-      .carousel_img {
-        height: auto;
-        width: 100%;
-      }
-    }
-  }
-  .header_content {
-    article {
-      text-align: center;
-      padding-top: 4%;
-      h3 {
-        margin-top: 2px;
-        font-weight: 400;
-        color: $titlecolor;
-      }
-      p {
-        color: $textcolor;
-        font-size: 17px;
-        span {
-          display: inline-block;
-          margin-top: 10px;
-        }
-      }
-    }
-    .link_nav {
-      text-align: center;
-      margin-top: 3%;
-      .link {
-        display: inline-block;
-        padding: 0.5% 1.5%;
-        text-decoration: none;
-        color: $textcolor !important;
-        margin: 0 20px;
-        border: 1px solid rgba(50,50,50,0.3);
-        cursor: pointer;
-      }
-      .link:hover {
-        text-decoration: none;
-        box-shadow: 1px 1px 2px rgba(50,50,50,0.2);
-        color: rgba(50,50,50,1);
-
-      }
-    }
-  }
+/* Header ------------------------------------------------------------------------------ */
+.header_toggle {
+	position: fixed;
+	z-index: 999 !important;
+	width: 100vw;
+	cursor: pointer;
+	header {
+		width: 100%;
+		height: 80vh;
+		border-bottom: $border;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		text-align: center;
+		box-shadow: $shadow;
+		background: url(http://wallpaper-download.net/wallpapers/abstract-wallpapers-blurred-background-wallpaper-34795.jpg);
+		background-position: top;
+		background-size: cover;
+		h1 {
+			font-size: $highsize;
+			padding: 1% 3%;
+			text-align: center;
+			background: rgba(25,25,25,1);
+			color: rgba(255,255,255,1);
+			small {
+				color: rgba(255,255,255,0.9);
+			}
+		}
+		.brief_wrapper {
+			width: 60%;
+			min-height: 120px;
+			margin: 0 auto;
+			margin-top: 5%;
+			background: rgba(0,0,0,0.1);
+			border-radius: $radius;
+		}
+	}
+	header:after {
+		content:"";
+		width: 80px;
+		height: 80px;
+		border: $border;
+		border-radius: 50%;
+		position: absolute;
+		top: 75vh;
+		margin-left: -41px;
+		text-align: center;
+		box-shadow: $shadow;
+		cursor: pointer;
+		background: white; /*temp*/
+	}
 }
-// .scrollmap {
-//   bottom: 40px;
-//   right: 40px;
-//   position: absolute;
-//   cursor: pointer;
-//   -webkit-animation: bounce 1.5s infinite; 
-//     -moz-animation:    bounce 1.5s infinite; 
-//     -o-animation:      bounce 1.5s infinite; 
-//     animation:         bounce 1.5s infinite; 
-// }
-// @-webkit-keyframes bounce {
-//   0%{margin-bottom: 0px;}
-//   70%{margin-bottom: -10px;}
-//   100%{margin-bottom: 0px;}
-// }
-// @-moz-keyframes bounce {
-//   0%{margin-bottom: 0px;}
-//   70%{margin-bottom: -10px;}
-//   100%{margin-bottom: 0px;}
-// }
-// @-o-keyframes bounce {
-//   0%{margin-bottom: 0px;}
-//   70%{margin-bottom: -10px;}
-//   100%{margin-bottom: 0px;}
-// }
-// @keyframes bounce {
-//   0%{margin-bottom: 0px;}
-//   70%{margin-bottom: -10px;}
-//   100%{margin-bottom: 0px;}
-// }
+.move_top {
+	margin-top: -78vh;
+	transition: 1s;
+}
 
-
-// Google map------------------------------------------------------------------------------------ Google map
+/* Sections ------------------------------------------------------------------------------ */
 #map_wrapper {
-  position: relative;
-  #googleMap {
-    position: absolute;
-    width: 100vw;
-    height: 80vh;
-    z-index: 998;
-  }
-  .stat_wrapper {
-    position: absolute;
-    bottom: 5vh;
-    span {
-      display: inline-block;
-      margin: 0 30px;
-      font-size: 22px;
-      p {
-        display: inline-block;
-        font-size: 16px;
-      }
-    }
-  }
-  i {
-    position: absolute;
-    bottom: 1em;
-    right: 1em;
-    z-index: 999;
-    cursor: pointer;
-  }
+	height: 100vh;
+	width: 100%;
+	#googleMap {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+}
+#report_wrapper {
+	height: 100vh;
+	width: 100%;
+	article {
+		margin: 0;
+		padding: 3%;
+		h1 {
+			font-size: 65px;
+			color: black !important;
+			line-height: 30px !important;
+			small {
+				color: black;
+				font-size: 16px;
+				margin-top: 25px;
+				margin-left: 5px;
+			}
+		}
+	}
+	.row {
+		padding: 0 !important;
+		#card_wrapper {
+			padding: 0 !important;
+			.report_card {
+				width: 80%;
+				height: 450px;
+				background: rgba(255,255,255,0.9); /*temp*/
+				border-radius: $radius;
+				margin-left: 6%;
+				box-shadow: $shadow;
+				header {
+					border-bottom: $border;
+					width: 100%;
+					height: 150px;
+					background: url(http://www.igayshop.com/wp-content/uploads/2015/05/1392047_480582848706456_243449054_n.jpg);
+					background-position: center;
+					background-size: cover;
+				}
+			}
+		}
+	}
+}
+#dist_wrapper {
+	height: 100vh;
+	width: 100%;
+	background: url(http://lernertandsander.com/wp-content/uploads/2015/01/LS-Fruit.jpg);
+	// background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs5FtRG4p7xaINAsAJvCHPI6pwOsn3_SIupRyiZxWtG9ubWAzm);
+	background-position: center;
+	background-size: cover;	
+	z-index:900; /*scale 900 901 902*/
+	position: relative;
+	article {
+		text-align: center;
+		margin-top: 4em;
+		h1 {
+			font-size: $highsize;
+		}
+		p {
+			font-size: $textsize;
+		}
+	}
+	#sheet_wrapper {
+		width: 45%;
+		min-height: 300px;
+		background: white; /*temp*/
+		border-radius: $radius;
+		margin: 2em auto;
+		text-align: center;
+		padding: 1.5%;
+		#entry_312704383 {
+			width: 200px;
+		}
+		#entry_2130931475 {
+			width: 500px;
+			height: 200px;
+		}
+	}
+}
+#dist_wrapper:after {
+	content:"";
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.1);
+	background: rgba(255,255,255,0.4);
+	z-index: -1;
+}
+#thanks_wrapper {
+	height: 100vh;
+	width: 100%;
 }
 
 
-// Disqus    ------------------------------------------------------------------------------------     Disqus 
-#disqus_thread {
-  width: 500px;
-  margin: 0 auto;
-  margin-top: 15px;
+/* Footer ------------------------------------------------------------------------------ */
+footer {
+	width: 100%;
+	min-height: 100px;
+	background: white;
+	border-top: $border;
 }
 
 
-// Footer    ------------------------------------------------------------------------------------     Footer
-#footer_wrapper {
-  padding: 1%;
-  padding-left: 2%;
-  height: 7vh;
-}
+
+
