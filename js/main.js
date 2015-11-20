@@ -51,7 +51,7 @@ function initialize() {
         
     var markers = [
         ['福美軒金牛角', 24.935443, 121.371027,'http://labs.google.com/ridefinder/images/mm_20_purple.png'],
-        ['榕樹下鮮肉包',24.932174, 121.374947,'http://labs.google.com/ridefinder/images/mm_20_purple.png'],
+        ['榕樹下鮮肉包',24.932174, 121.374947,'http://labs.google.com/ridefinder/images/mm_20_green.png'],
     ];
                         
     var infoWindowContent = [
@@ -80,7 +80,8 @@ function initialize() {
         marker = new google.maps.Marker({
             position: position,
             map: map,
-            title: markers[i][0]
+            title: markers[i][0],
+            icon: markers[i][3]
         });
         
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
