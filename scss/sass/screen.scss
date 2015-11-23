@@ -58,7 +58,51 @@ html, body {
 		z-index: 999;
 	}
 }
-
+.info_content {
+	min-height: 200px;
+	position: relative;
+	.title_wrapper {
+		height: 80px;
+		margin-bottom: 1em;
+		.info_title, .title_img {
+			display: inline-block;
+			vertical-align: bottom;
+		}
+		.title_img {
+			height: 80px;
+			width: 80px;
+		}
+		.info_title {
+			font-size: 20px;
+			font-weight: bold;
+			padding-bottom: 2px;
+			padding-left: 5px;
+		}
+	}
+	.info_description {
+		font-size: $textsize;
+	}
+	.info_description:before {
+		content:attr(data-content);
+		color: rgba(51,182,116,1);
+	}
+	.info_link {
+		color: rgba(50,50,50,0.9);
+		position: absolute;
+		left: 40px;
+		bottom: 5px;
+	}
+	.info_img {
+		width: 30px;
+		height: 30px;
+		border: 2px solid rgba(255,255,255,1);
+		border-radius:50%;
+		position: absolute;
+		left: -40px;
+		margin-right: 5px;
+		bottom: -5px;
+	}
+}
 
 /* Header ------------------------------------------------------------------------------ */
 .header_toggle {
@@ -126,8 +170,9 @@ html, body {
 		text-align: center;
 		box-shadow: $shadow;
 		cursor: pointer;
-		background: url(http://i.imgur.com/9buRo5R.png);
+		background: url(http://i.imgur.com/Pw5kgjG.png);
 		background-size: cover;
+		background-repeat: no-repeat;
 	}
 }
 .move_top {
@@ -139,81 +184,74 @@ html, body {
 #map_wrapper {
 	height: 100vh;
 	width: 100%;
+	position: relative;
 	#googleMap {
 		position: absolute;
 		width: 100%;
 		height: 100%;
 	}
-}
-#report_wrapper {
-	height: 100vh;
-	width: 100%;
-	padding: 3% 7% 3% 7% !important;
-	article {
-		margin: 0;
-		padding: 3%;
-		h1 {
-			font-size: 65px;
-			font-family: $highfont;
-			font-weight: $bold;
-			color: black !important;
-			line-height: 30px !important;
-			padding-top: 10px;
-			margin-bottom: 20px;
+	#hint {
+		position: absolute;
+		z-index: 990;
+		top: 20vh;
+		left: 1em;
+		background: rgba(50,50,50,0.4);
+		padding: 2%;
+		border-radius: 4px;
+		div {
+			color: white;
+			text-align: center;
+			margin-bottom: 1em;
+			font-weight: bold;
 		}
 	}
-	.row {
-		padding: 0 !important;
-		#card_wrapper {
-			padding: 0 !important;
-			vertical-align: top;
-			.report_card {
-				width: 95%;
-				height: 450px;
-				background: rgba(255,255,255,0.9); /*temp*/
-				border-radius: $radius;
-				margin-left: 6%;
-				box-shadow: $shadow;
-				header {
-					border-bottom: $border;
-					width: 100%;
-					height: 150px;
-					background: url(http://www.igayshop.com/wp-content/uploads/2015/05/1392047_480582848706456_243449054_n.jpg);
-					background-position: center;
-					background-size: cover;
-					position: relative;
-				}
-				header:before {
-					content: "";
-					background: rgba(255,255,255,0.2);
-					position: absolute;
-					width: 100%;
-					height: 150px;
+}
+#thanks_wrapper {
+	height: 100vh;
+	width: 100%;
+	.titles {
+		text-align: center;
+		margin: 5% auto;
+		margin-bottom: 1%;
+		h4 {
+			font-size: $highsize;
+			font-family: $highfont;
+			font-weight: $bold;
+		}
+	}
+	.people {
+		padding: 0;
+		.people_wrapper {
+			text-align: center;
+			.people_header {
+				text-align: center;
+				i {
+					margin: 3% auto;
 				}
 			}
 		}
-		#outcome_wrapper {
-			padding-right: 5%;
-			vertical-align: top;
-			position: relative;
-			height: 100%;
+		.line {
+			text-align: center;
+			margin: 3% auto;
 			a {
-				position: absolute;
-				bottom: 20px;
-				right: 5px;
-				padding: 2% 5%;
+				display: inline-block;
+				margin: 0 20px;
+				font-size: 12px;
 				text-align: center;
-				border: $border;
-				margin: 0 auto;
+				img {
+					width: 60px;
+					height: 60px;
+					border: $border;
+					border-radius: 50%;
+				}
 			}
 		}
 	}
 }
 #dist_wrapper {
-	height: 100vh;
+	height: 90vh;
 	width: 100%;
 	background: url(http://lernertandsander.com/wp-content/uploads/2015/01/LS-Fruit.jpg);
-	// background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs5FtRG4p7xaINAsAJvCHPI6pwOsn3_SIupRyiZxWtG9ubWAzm);
 	background-position: center;
 	background-size: cover;	
 	z-index:900; /*scale 900 901 902*/
@@ -239,12 +277,48 @@ html, body {
 		margin: 2em auto;
 		text-align: center;
 		padding: 1.5%;
-		#entry_312704383 {
-			width: 200px;
+		font-size: 16px;
+		.q1 {
+			#entry_312704383 {
+				width: 70%;
+				margin-top: 5px;
+				border: 0.5px solid rgba(50,50,50,0.2);
+				box-shadow: 1px 1px 3px rgba(50,50,50,0.2);
+				font-size: 13px;
+				padding: 5px !important;
+			}
 		}
-		#entry_2130931475 {
-			width: 500px;
-			height: 200px;
+		.q2 {		
+			margin-top: 1.5em;
+			#entry_2130931475 {
+				width: 70%;
+				margin-top: 5px;
+				height: 100px;
+				border: 0.5px solid rgba(50,50,50,0.2);
+				box-shadow: 1px 1px 3px rgba(50,50,50,0.2);
+				font-size: 13px;
+				padding: 5px !important;
+			}
+		}
+		.q3 {
+			margin-top: 1.5em;
+			#entry_1833608599 {
+				width: 50%;
+				margin-top: 5px;
+				border: 0.5px solid rgba(50,50,50,0.2);
+				box-shadow: 1px 1px 3px rgba(50,50,50,0.2);
+				font-size: 13px;
+				padding: 5px !important;
+			}
+		}
+		#ss-submit {
+			margin-top: 2em;
+			width: 100px;
+			height: 50px;
+			background: none !important;
+			border: 0.5px solid rgba(50,50,50,0.2);
+			box-shadow: none !important;
+			position: relativel
 		}
 	}
 }
@@ -261,10 +335,72 @@ html, body {
 	background: rgba(255,255,255,0.4);
 	z-index: -1;
 }
-#thanks_wrapper {
-	height: 100vh;
-	width: 100%;
-}
+
+// #report_wrapper {
+// 	height: 100vh;
+// 	width: 100%;
+// 	padding: 3% 7% 3% 7% !important;
+// 	article {
+// 		margin: 0;
+// 		padding: 3%;
+// 		h1 {
+// 			font-size: 65px;
+// 			font-family: $highfont;
+// 			font-weight: $bold;
+// 			color: black !important;
+// 			line-height: 30px !important;
+// 			padding-top: 10px;
+// 			margin-bottom: 20px;
+// 		}
+// 	}
+// 	.row {
+// 		padding: 0 !important;
+// 		#card_wrapper {
+// 			padding: 0 !important;
+// 			vertical-align: top;
+// 			.report_card {
+// 				width: 95%;
+// 				height: 450px;
+// 				background: rgba(255,255,255,0.9); /*temp*/
+// 				border-radius: $radius;
+// 				margin-left: 6%;
+// 				box-shadow: $shadow;
+// 				header {
+// 					border-bottom: $border;
+// 					width: 100%;
+// 					height: 150px;
+// 					background: url(http://www.igayshop.com/wp-content/uploads/2015/05/1392047_480582848706456_243449054_n.jpg);
+// 					background-position: center;
+// 					background-size: cover;
+// 					position: relative;
+// 				}
+// 				header:before {
+// 					content: "";
+// 					background: rgba(255,255,255,0.2);
+// 					position: absolute;
+// 					width: 100%;
+// 					height: 150px;
+// 				}
+// 			}
+// 		}
+// 		#outcome_wrapper {
+// 			padding-right: 5%;
+// 			vertical-align: top;
+// 			position: relative;
+// 			height: 100%;
+// 			a {
+// 				position: absolute;
+// 				bottom: 20px;
+// 				right: 5px;
+// 				padding: 2% 5%;
+// 				text-align: center;
+// 				border: $border;
+// 				margin: 0 auto;
+// 			}
+// 		}
+// 	}
+// }
+
 
 
 /* Footer ------------------------------------------------------------------------------ */

@@ -64,9 +64,27 @@
             <div class="row">
                 <section id="map_wrapper" class="col-md-12">
                     <div id="googleMap"></div>
+                    <div id="hint">
+                        <div>
+                            <img src="mapimg/a.png">
+                            <p>正餐</p>
+                        </div>
+                        <div>
+                            <img src="mapimg/b.png">
+                            <p>小吃</p>
+                        </div>
+                        <div>
+                            <img src="mapimg/c.png">
+                            <p>點心</p>
+                        </div>
+                        <div>
+                            <img src="mapimg/d.png">
+                            <p>其他</p>
+                        </div>
+                    </div>
                     <div id="down1" class="scroll_wrapper"><i class="fa fa-angle-down"></i></div>
                 </section>
-                <section id="report_wrapper" class="col-md-12">
+                <!-- <section id="report_wrapper" class="col-md-12">
                     <article>
                         <h1>
                             Special Picked
@@ -85,6 +103,46 @@
                         </div>
                     </div>
                     <div id="down2" class="scroll_wrapper"><i class="fa fa-angle-down"></i></div>
+                </section> -->
+                <section id="thanks_wrapper" class="col-md-12">
+                    <div class="titles">
+                        <h4>Special thank</h4>
+                    </div>
+                    <div class="row people">
+                        <div class="col-md-6 people_wrapper">
+                            <div class="people_header">
+                                <i class="fa fa-male fa-5x"></i>
+                                <p>Male</p>
+                            </div>
+                            <div class="line">
+                                <a href=""><img src=""></a>
+                                <a href=""><img src=""></a>
+                                <a href=""><img src=""></a>
+                            </div>
+                            <div class="line">
+                                <a href=""><img src=""></a>
+                                <a href=""><img src=""></a>
+                                <a href=""><img src=""></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 people_wrapper">
+                            <div class="people_header">
+                                <i class="fa fa-female fa-5x"></i>
+                                <p>Female</p>
+                            </div>
+                            <div class="line">
+                                <a href=""><img src=""></a>
+                                <a href=""><img src=""></a>
+                                <a href=""><img src=""></a>
+                            </div>
+                            <div class="line">
+                                <a href=""><img src=""></a>
+                                <a href=""><img src=""></a>
+                                <a href=""><img src=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="down3" class="scroll_wrapper"><i class="fa fa-angle-down"></i></div>
                 </section>
                 <section id="dist_wrapper" class="col-md-12">
                     <article>
@@ -107,11 +165,11 @@
                                 <iframe name="hidden_iframe_yqprmdwg" id="hidden_iframe_yqprmdwg" style="display:none;" onload="if(submitted_yqprmdwg){window.location='http://kcin1993.github.io/sanxia-top50/';}"></iframe>
                                 <form action="https://docs.google.com/forms/d/11WsfosfEA8J7yKH1PcJkJNZ_VU7V4OnBJDe5vajs9T4/formResponse" method="post" target="hidden_iframe_yqprmdwg" onsubmit="submitted_yqprmdwg=true;" id="ss-form" target="_self" onsubmit="">
                                   <ol role="list" style="padding-left: 0">
-                                    <div role="listitem">
+                                    <div role="listitem" class="q1">
                                       <div dir="auto">
                                         <div>
                                           <label for="entry_312704383">
-                                            <div>若有人問你『三峽有什麼好吃的』，你最推薦什麼?
+                                            <div>你最推薦的三峽美食？
                                               <label for="itemView.getDomIdToLabel()" aria-label="(Kailangang field)"></label>
                                               <span aria-hidden="true"></span>
                                             </div>
@@ -119,10 +177,10 @@
                                           </label>
                                           <div id="2001346012_errorMessage"></div>
                                         </div>
-                                        <input type="text" name="entry.312704383" value="" id="entry_312704383" dir="auto" aria-label="若有人問你『三峽有什麼好吃的』，你最推薦什麼?  " aria-required="true" required="" title="">
+                                        <input type="text" name="entry.312704383" value="" id="entry_312704383" dir="auto" aria-required="true" required="" title="">
                                       </div>
                                     </div>
-                                    <div role="listitem">
+                                    <div role="listitem" class="q2">
                                       <div dir="auto">
                                         <div>
                                           <label for="entry_2130931475">
@@ -134,19 +192,19 @@
                                           </label>
                                           <div id="2141681830_errorMessage"></div>
                                         </div>
-                                        <textarea name="entry.2130931475" id="entry_2130931475" dir="auto" aria-label="給點這道美食或店家的評語  " aria-required="true" required=""></textarea>
+                                        <textarea name="entry.2130931475" id="entry_2130931475" dir="auto" aria-required="true" required="" placeholder="特色 / 缺點 ..."></textarea>
                                       </div>
                                     </div>
-                                    <div role="listitem">
+                                    <div role="listitem" class="q3">
                                       <div dir="auto">
                                         <div>
                                           <label for="entry_1833608599">
                                             <div>Facebook ID </div>
-                                            <div dir="auto">謝謝你提供的美食資訊。留下你的臉書，我們將在下方感謝參與本計畫的同學</div>
+                                            <div dir="auto"></div>
                                           </label>
-                                          <input type="text" name="entry.1833608599" value="" id="entry_1833608599" dir="auto" aria-label="Facebook ID  謝謝你提供的美食資訊。留下你的臉書，我們將在下方感謝參與本計畫的同學 " title="">
                                           <div id="660508889_errorMessage"></div>
                                         </div>
+                                        <input type="text" name="entry.1833608599" value="" id="entry_1833608599" dir="auto" title="" placeholder="僅上方感謝頁使用">
                                       </div>
                                     </div>
                                     <input type="hidden" name="draftResponse" value="[,,&quot;799251305399257435&quot;]">
@@ -177,9 +235,6 @@
                                         "[100,,[]\n]\n");</script>
                         </div>
                     </div>
-                    <div id="down3" class="scroll_wrapper"><i class="fa fa-angle-down"></i></div>
-                </section>
-                <section id="thanks_wrapper" class="col-md-12">
                     <div id="up1" class="scroll_wrapper"><i class="fa fa-angle-up"></i></div>
                 </section>
             </div>
