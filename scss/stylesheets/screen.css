@@ -196,7 +196,7 @@ html, body {
   position: relative;
   text-align: center;
   box-shadow: 1px 1px 3px rgba(50, 50, 50, 0.4);
-  background: url(http://i.imgur.com/JNd6Fez.jpg);
+  background-image: url("http://i.imgur.com/JNd6Fez.jpg");
   background-position: top;
   background-size: cover;
 }
