@@ -31,24 +31,40 @@ function initialize() {
     var markers = [
         ['福美軒金牛角', 24.935443, 121.371027,'mapimg/c.png'],
         ['榕樹下鮮肉包',24.932174, 121.374947,'mapimg/b.png'],
+        ['憨吉朗',24.9490483,121.37797479999995,'mapimg/a.png'],
+        ['早餐優選',24.947278,121.3734283,'mapimg/a.png'],
+        ['禾剛燒烤',24.9310162,121.37608699999998,'mapimg/a.png'] 
     ];
                         
     var infoWindowContent = [
         [
         '<div class="info_content">' +
-        '<div class="title_wrapper"><img src="mapimg/1.png" class="title_img"><h3 class="info_title">福美軒金牛角</h3></div>' +
-        '<p class="info_description" data-content="◆ ">特色：三峽金牛角創始店</p>' + 
-        '<p class="info_description" data-content="◆ ">探索：新北市三峽區信義街25號</p>' + 
-        '<p class="info_description" data-content="◆ ">相關資訊：<a href="http://goo.gl/U9CMLY">以堅持書寫三角湧代名詞</a></p>' + 
-        '<a href="http://www.shockpaper.com/" class="info_link"><img src="people/shock.png" class="info_img">Shock！ 三峽客</a>' +
+        '<div class="title_area"><div class="img_wrapper"><img src="people/1.png"></div><h1 class="name">三峽客報導</h1></div>'+
+        '<ul class="list_wrapper"><li class="list" data-content="推薦店家：福美軒金牛角"></li><li class="list" data-content="評論：三峽金牛角，元老級創始店"></li><li class="list" data-content="Google店家的結果："><a href="http://goo.gl/U9CMLY">以堅持書寫三角湧代名詞</a><a href=""></a><a href=""></a></li><li class="list" data-content="探索：新北市三峽區信義街25號"></li></ul>'+
         '</div>'
         ],
         [
         '<div class="info_content">' +
-        '<div class="title_wrapper"><img src="mapimg/2.png" class="title_img"><h3 class="info_title">榕樹下鮮肉包</h3></div>' +
-        '<p class="info_description" data-content="◆ ">探索：台北縣三峽鎮中華路3巷11之3號</p>' + 
-        '<p class="info_description" data-content="◆ ">相關資訊：<a href="http://goo.gl/ap2ZcH">【店鋪專欄】榕樹下鮮肉包</a></p>' +  
-        '<a href="http://www.shockpaper.com/" class="info_link"><img src="people/shock.png" class="info_img">Shock！ 三峽客</a>' +
+        '<div class="title_area"><div class="img_wrapper"><img src="people/1.png"></div><h1 class="name">三峽客報導</h1></div>'+
+        '<ul class="list_wrapper"><li class="list" data-content="推薦店家：榕樹下鮮肉包"></li><li class="list" data-content="評論：皮薄汁多料多的包子，每天有限量出爐"></li><li class="list" data-content="Google店家的結果："><a href="http://goo.gl/ap2ZcH">【店鋪專欄】榕樹下鮮肉包</a><a href=""></a><a href=""></a></li><li class="list" data-content="探索：台北縣三峽鎮中華路3巷11之3號"></li></ul>'+
+        '</div>'
+        ],
+        [
+        '<div class="info_content">' +
+        '<div class="title_area"><div class="img_wrapper"><img src="people/2.jpg"></div><h1 class="name">林佑安</h1></div>'+
+        '<ul class="list_wrapper"><li class="list" data-content="推薦店家：憨吉朗"></li><li class="list" data-content="評論："></li><li class="list" data-content="Google店家的結果："><a href="http://goo.gl/ZRfwIw">(三峽北大)憨吉朗早午餐，義大利麵@Staciegotozoo的部落</a><a href=""></a><a href=""></a></li><li class="list" data-content="探索：新北市三峽區大觀路120號"></li></ul>'+
+        '</div>'
+        ],
+        [
+        '<div class="info_content">' +
+        '<div class="title_area"><div class="img_wrapper"><img src="people/3.jpg"></div><h1 class="name">陳貝綸</h1></div>'+
+        '<ul class="list_wrapper"><li class="list" data-content="推薦店家：早餐優選"></li><li class="list" data-content="評論：">最推薦蔬菜起司焗烤土司，清爽好吃！但分量不多，要吃飽不建議來。</li><li class="list" data-content="Google店家的結果："><a href="http://goo.gl/48Ev9y">新北市-三峽北大～早餐優選-ryan0725-痞客邦PIXNET</a><a href=""></a><a href=""></a></li><li class="list" data-content="探索：新北市樹林區學林路47號"></li></ul>'+
+        '</div>'
+        ],
+        [
+        '<div class="info_content">' +
+        '<div class="title_area"><div class="img_wrapper"><img src="people/4.jpg"></div><h1 class="name">李浩廷</h1></div>'+
+        '<ul class="list_wrapper"><li class="list" data-content="推薦店家：禾剛燒烤"></li><li class="list" data-content="評論："></li><li class="list" data-content="Google店家的結果："><a href="https://goo.gl/pyJY9F">三峽美食．禾岡炭火燒肉</a><a href=""></a><a href=""></a></li><li class="list" data-content="探索：新北市三峽區中正路一段22號"></li></ul>'+
         '</div>'
         ],
     ];

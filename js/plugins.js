@@ -59,4 +59,9 @@ $("document").ready(function() {
         scrollTop: $("#map_wrapper").offset().top
       }, 1500);    
      });
+    $('#dist').click(function(){
+      $('html, body').animate({
+        scrollTop: $("#dist_wrapper").offset().top
+      }, 1500);    
+     });
 });
