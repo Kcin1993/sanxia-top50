@@ -64,4 +64,24 @@ $("document").ready(function() {
         scrollTop: $("#dist_wrapper").offset().top
       }, 1500);    
      });
+    $('#search').click(function(){
+      $('html, body').animate({
+        scrollTop: $("#map_wrapper").offset().top
+      }, 1500);    
+     });
 });
+
+
+// Header nav alert 
+function myFunction() {
+    alert("在地圖中有4種類別的食物分類，點擊icon後你可以看見同學推薦的美食與評論。 同時附上該店家在Google上的搜尋結果提供給您參考");
+}
+
+function myFunction2() {
+    alert("你也有私藏的三峽在地美食嗎？ 填寫美食提案吧！ 你將留名青史於本站的感謝區中");
+}
+
+function myFunction3() {
+    alert("目標蒐集到50份同學的美食提案。 達標後，計畫將在YOGO上揪團，參與YOGO上的揪團你將會收到所有美食提案的整理");
+} 
+
