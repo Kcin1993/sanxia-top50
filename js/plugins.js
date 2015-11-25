@@ -78,7 +78,7 @@ function myFunction() {
 }
 
 function myFunction2() {
-    alert("你也有私藏的三峽在地美食嗎？ 填寫美食提案吧！ 你將留名青史於本站的感謝區中");
+    alert("在三峽你最愛的食物是什麼？ 來填寫美食提案吧！ 你將留名青史於本站的感謝區中");
 }
 
 function myFunction3() {
